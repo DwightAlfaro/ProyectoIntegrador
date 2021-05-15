@@ -28,9 +28,9 @@ body{
 }
 
 .negro {
-    width: 150px;
+    /* width: 150px;
     position: relative;
     left: 100px;
-    margin-left: -75px;
+    margin-left: -75px; */
     filter: brightness(0.01);
 }
