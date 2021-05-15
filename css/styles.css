@@ -26,3 +26,11 @@ body{
 #jugador-cartas, #computadora-cartas{
     height: 240px;
 }
+
+.negro {
+    width: 150px;
+    position: relative;
+    left: 100px;
+    margin-left: -75px;
+    filter: brightness(0.01);
+}
