@@ -1,11 +1,20 @@
+*{
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
 
-html, body{
+.body-home{
     margin: 0px;
-    background-color: #2f4f30;
+    background-color: #000;
     color : #fff;
 }
+.body-index{
+    background-color: #000;
+    height: 100vh;
+    position: relative;
+}
 body{
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 .titulo{
@@ -13,7 +22,14 @@ body{
     background-color: #000;
     color: #fff;
     padding: 20px;
-    font-size: 25px;
+    font-size: 57px;
+}
+.block-index{
+    position: absolute;
+    top: 24%;
+    text-align: center;
+    left: 39%;
+    margin: 0 auto;
 }
 
 .carta{
@@ -28,9 +44,13 @@ body{
 }
 
 .negro {
-    /* width: 150px;
-    position: relative;
-    left: 100px;
-    margin-left: -75px; */
-    filter: brightness(0.01);
+    /* filter: brightness(0.01); */
+    /* filter: blur(21px); */
+    filter: contrast(0.002);
+    border: 3px solid red;
+    border-radius: 15px;
+}
+
+.animate__backInDown{
+    --animate-duration: 2s;
 }

@@ -5,65 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blackjack</title>
-
+  
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link rel="stylesheet" href="css/styles.css">
-
 </head>
-<body>
+<body class="body-index">
     
-    <header class="titulo" >Blackjack</header>
-    
-    <div class="row mt-2">
-        <div class="col text-center">
-            <button id="btnNuevo"  class="btn btn-danger" >Nuego Juego</button>
-            <!-- <button id="btnPedir"  class="btn btn-primary" >Pedir carta</button> -->
-            <button id="btnDetener"  class="btn btn-primary" >Detener</button>
-   
-        </div>
+    <div class="block-index ">
+        <h1 class="titulo animate__backInDown" >Blackjack</h1>
+        <a class="btn btn-primary" href="home.html "> Jugar </a>
     </div>
 
-    <div class="row container-fluid mx-auto">
-        <div class="col-6">
-            <h1>Jugador 1 - <small>0</small></h1>
-            <button id="btnPedirUno"  class="btn btn-primary" >Pedir carta</button>
-            <div id="jugador-cartas">
-                <!-- <img class="carta" src="assets/cartas/10C.png" alt="">
-                <img class="carta" src="assets/cartas/10C.png" alt="">
-                <img class="carta" src="assets/cartas/10C.png" alt="">
-                <img class="carta" src="assets/cartas/10C.png" alt=""> -->
-
-            </div>
-        </div>
-        <div class="col-6">
-            <h1>Jugador 2 - <small>0</small></h1>
-            <button id="btnPedirDos"  class="btn btn-primary" >Pedir carta</button>
-            <div id="jugador-cartas-dos">
-                <!-- <img class="carta" src="assets/cartas/10C.png" alt="">
-                <img class="carta" src="assets/cartas/10C.png" alt="">
-                <img class="carta" src="assets/cartas/10C.png" alt="">
-                <img class="carta" src="assets/cartas/10C.png" alt=""> -->
-
-            </div>
-        </div>
-    </div>
-
-    <div class="row container-fluid mt-3 mx-auto">
-        <div class="col">
-            <h1>Computadora - <small>0</small></h1>
-
-            <div id="computadora-cartas">
-                <!-- <img class="carta" src="assets/cartas/2D.png" alt="">
-                <img class="carta" src="assets/cartas/2D.png" alt="">
-                <img class="carta" src="assets/cartas/2D.png" alt="">
-                <img class="carta" src="assets/cartas/2D.png" alt=""> -->
-
-            </div>
-        </div>
-    </div>
-
-    <script src="js/underscore-min.js"></script>
-    <script src="js/juego.js"></script>
-    <!-- <script src="assets/js/juegoOptimizado.js"></script> -->
 </body>
 </html>
