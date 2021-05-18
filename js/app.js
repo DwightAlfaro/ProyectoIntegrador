@@ -5,35 +5,34 @@
     'use strict'
 
     let deck         = [];
-    const tipos      = ['C', 'D', 'H', 'S'],
+    const tipos      = ['C', 'D', 'H', 'S'], 
           especiales = ['A', 'J', 'Q', 'K']
 
     let puntosJugador     = 0,
         puntosJugadorDos  = 0,
         puntosComputadora = 0;
 
-    //Referencias
-    const btnPedirUno = document.querySelector('#btnPedirUno');
-    const btnPedirDos = document.querySelector('#btnPedirDos');
-    const btnDetener = document.querySelector('#btnDetener');
-    const btnNuevo = document.querySelector('#btnNuevo');
+    const btnPedirUno = document.querySelector('#btnPedirUno'),
+          btnPedirDos = document.querySelector('#btnPedirDos'),
+          btnDetener = document.querySelector('#btnDetener'),
+          btnNuevo = document.querySelector('#btnNuevo'),
 
-    const puntosHTML = document.querySelectorAll('small');
-    const cartasJugador = document.querySelector('#jugador-cartas');
-    const cartasJugadorDos = document.querySelector('#jugador-cartas-dos');
-    const cartasComputadora = document.querySelector('#computadora-cartas')
+          puntosHTML = document.querySelectorAll('small'),
+          cartasJugador = document.querySelector('#jugador-cartas'),
+          cartasJugadorDos = document.querySelector('#jugador-cartas-dos'),
+          cartasComputadora = document.querySelector('#computadora-cartas');
 
 
     //crear un nuevo deck
     const crearDeck = () =>{
     
         for( let i = 2; i <= 10; i++){
-            for (const tipo in tipos) {   //for in
+            for (const tipo in tipos) {   
                 deck.push( i + tipos[tipo]);
             }
         }
 
-        for(const tipo in tipos){         //for in
+        for(const tipo in tipos){        
             for( const espe in especiales){
                 deck.push(especiales[espe] + tipos[tipo]);
             }
@@ -46,14 +45,12 @@
     crearDeck();
 
 
-
     // tomar una carta
     const tomarCarta = () => { 
         if (deck.length === 0){
             throw 'No hay mas cartas';
         }
         let carta = deck.pop();
-        console.log(carta);
         return carta;
 
     };
@@ -65,7 +62,6 @@
     const valorCarta = ( carta ) => {
         const valor = carta.substring(0, carta.length - 1);
 
-        console.log({ valor });
         return ( isNaN(valor) )   ? 
             ( valor  === 'A' ) ? 11 : 10
             : valor * 1;
@@ -135,7 +131,7 @@
 
 
 
-    // Eventos botones
+    // Evento botones
     btnPedirUno.addEventListener( 'click', () => {
         const carta = tomarCarta();
         puntosJugador += valorCarta( carta );
@@ -155,7 +151,6 @@
         imgCartaDos.src = "img/"+cartaDos+".png";
         imgCartaDos.classList = 'carta';
         imgCartaDos.classList.add('negro');
-        console.log("entrando", cartaDos);
         cartasJugadorDos.append(imgCartaDos);
     });
 
